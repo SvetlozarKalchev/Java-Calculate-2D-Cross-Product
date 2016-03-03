@@ -12,10 +12,7 @@ public class MatrixCreator
       for(int c = 0; c < columns; c++)
       {
         matrix[r][c] = this.generateValue(2);
-        System.out.print(matrix[r][c] + " ");
       }
-
-      System.out.println();
     }
 
     return matrix;
