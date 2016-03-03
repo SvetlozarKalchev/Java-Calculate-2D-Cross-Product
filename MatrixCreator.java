@@ -24,6 +24,11 @@ public class MatrixCreator
   // Generates random floating point value 0 < n < range
   public double generateValue(int range)
   {
-    return 2;
+    Random rand = new Random();
+
+      double answer = range + rand.nextDouble();
+
+      return answer;
+    //return 2;
   }
 }

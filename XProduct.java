@@ -6,5 +6,8 @@ public class XProduct
 
     mc.createMatrix(5, 5);
 
+
+    double value = mc.generateValue(100);
+    System.out.println(value);
   }
 }
