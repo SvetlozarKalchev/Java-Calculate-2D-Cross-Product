@@ -25,6 +25,11 @@ public class MatrixCreator
 
       double answer = range + rand.nextDouble();
 
+      // Set the precision of a floating point number.
+      // First we multiply the double value with 10000 and than we must take only
+      // the int value and than we devide the number by 10000.
+      answer = answer * 10000;
+      answer = (double)((int)answer)/10000;
       return answer;
     //return 2;
   }
