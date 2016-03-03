@@ -15,22 +15,23 @@ public class XProduct
 
   public static void main(String args[])
   {
-    int rows = 5, cols = 5;
+    int rows = 5000, cols = 5000;
 
     MatrixCreator mc = new MatrixCreator();
 
     double[][] first_matrix = mc.createMatrix(rows, cols);
     double[][] second_matrix = mc.createMatrix(rows, cols);
 
-    printMatrix(first_matrix, rows, cols);
-
-
-
-    double value = mc.generateValue(100);
-    System.out.println(value);
+    // printMatrix(first_matrix, rows, cols);
 
     System.out.println();
 
-    printMatrix(second_matrix, rows, cols);
+    // printMatrix(second_matrix, rows, cols);
+
+    // Calculate cross-product
+    Correlator correlator = new Correlator();
+
+    printMatrix(correlator.calculate2DProduct(first_matrix, second_matrix, rows, cols), rows, cols);
+
   }
 }
