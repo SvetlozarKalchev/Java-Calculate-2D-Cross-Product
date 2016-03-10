@@ -27,11 +27,11 @@ public class XProduct
 
     final long startingTime = System.currentTimeMillis();
 
-    printMatrix(correlator.calculate2DProduct(first_matrix, second_matrix, rows, cols), rows, cols);
+    correlator.calculate2DProduct(first_matrix, second_matrix, rows, cols);
 
     final long endTime = System.currentTimeMillis();
 
-    double endTimeSeconds = (endTime - startingTime) / (double) 1000;
+    double endTimeSeconds = (endTime - startingTime);// / (double) 1000;
 
     System.out.println("End time: " + endTimeSeconds);
   }
