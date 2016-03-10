@@ -27,7 +27,7 @@ public class XProduct
 
     final long startingTime = System.currentTimeMillis();
 
-    printMatrix(correlator.calculate2DProduct(first_matrix, second_matrix, rows, cols), rows, cols);
+    //printMatrix(correlator.calculate2DProduct(first_matrix, second_matrix, rows, cols), rows, cols);
 
     final long endTime = System.currentTimeMillis();
 
