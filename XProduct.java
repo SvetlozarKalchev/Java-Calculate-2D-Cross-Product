@@ -7,9 +7,9 @@ public class XProduct
     {
       for (int c = 0; c < cols; c++)
       {
-        System.out.print(matrix[r][c] + " ");
+        // System.out.print(matrix[r][c] + " ");
       }
-      System.out.println();
+      // System.out.println();
     }
   }
 
@@ -22,16 +22,17 @@ public class XProduct
     double[][] first_matrix = mc.createMatrix(rows, cols);
     double[][] second_matrix = mc.createMatrix(rows, cols);
 
-    // printMatrix(first_matrix, rows, cols);
-
-    System.out.println();
-
-    // printMatrix(second_matrix, rows, cols);
-
     // Calculate cross-product
     Correlator correlator = new Correlator();
 
+    final long startingTime = System.currentTimeMillis();
+
     printMatrix(correlator.calculate2DProduct(first_matrix, second_matrix, rows, cols), rows, cols);
 
+    final long endTime = System.currentTimeMillis();
+
+    double endTimeSeconds = (endTime - startingTime) / (double) 1000;
+
+    System.out.println("End time: " + endTimeSeconds);
   }
 }
